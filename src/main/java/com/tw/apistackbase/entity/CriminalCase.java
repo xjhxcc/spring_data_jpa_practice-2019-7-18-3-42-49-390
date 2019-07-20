@@ -17,6 +17,7 @@ public class CriminalCase {
     @NotNull
     private String name;
     @NotNull
+    @Column(name="caseTime")
     private Long time;
 
     @OneToOne(cascade = CascadeType.ALL)

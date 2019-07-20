@@ -2,6 +2,7 @@ package com.tw.apistackbase.entity;
 
 import org.hibernate.annotations.GenericGenerator;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,9 +17,11 @@ public class CriminalElements {
     private String id;
 
     @NotNull
+    @Column(name = "subElement")
     private String subjectiveElementDescription;
 
     @NotNull
+    @Column(name = "objElement")
     private String objectiveElementDescription;
 
     public String getId() {
